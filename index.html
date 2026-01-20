@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visions Through Sound — Stevie Wonder</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;700;900&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Playfair Display', serif; }
+
+    .bebas { font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; }
+    .oswald { font-family: 'Oswald', sans-serif; }
+
+    .bg-gradient-custom {
+      background: linear-gradient(135deg,#7f1d1d,#991b1b,#dc2626,#ea580c,#f97316);
+    }
+
+    .artifact-card {
+      transition: 0.3s ease;
+    }
+
+    .artifact-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .image-box {
+      height: 260px;
+      background: #111;
+      overflow: hidden;
+    }
+
+    .expandable-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .expanded {
+      max-height: 2000px;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-custom text-white">
+
+<!-- ================= CURATOR SIGN ================= -->
+<section class="bg-black bg-opacity-50 py-4 border-b border-yellow-500">
+  <div class="max-w-6xl mx-auto text-center">
+    <p class="bebas text-yellow-400 text-lg tracking-widest">Museum of Silenced Voices</p>
+    <p class="oswald text-orange-300 text-sm">Curated by Tae Jaede</p>
+  </div>
+</section>
+
+<!-- ================= HERO ================= -->
+<header class="relative py-20 text-center">
+  <img src="./Images/stevie-wonder-performing.jpg"
+       alt="Stevie Wonder performing"
+       class="absolute inset-0 w-full h-full object-cover opacity-30">
+
+  <div class="relative z-10 max-w-5xl mx-auto">
+    <h1 class="text-7xl bebas text-yellow-300 mb-4">Visions Through Sound</h1>
+    <h2 class="text-2xl italic text-orange-100">Stevie Wonder: Seeing When Blind</h2>
+  </div>
+</header>
+
+<!-- ================= THESIS ================= -->
+<section class="max-w-5xl mx-auto px-6 py-16">
+  <div class="bg-red-900 bg-opacity-60 p-10 rounded-lg border-2 border-orange-400">
+    <h3 class="bebas text-yellow-400 text-2xl mb-4">Curatorial Thesis</h3>
+    <p class="text-xl italic text-orange-100">
+      Although Zora Neale Hurston and Stevie Wonder work in different artistic mediums, they share a common goal. To give voice to marginalized communities and/or groups whose humanity has been glossed over, erased, or distorted by dominant narratives. 
+    </p>
+  </div>
+</section>
+
+<!-- ================= ARTIFACTS ================= -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+  <h3 class="bebas text-5xl text-center text-yellow-300 mb-12">Exhibit Artifacts</h3>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Artifact 1 -->
+    <div class="artifact-card bg-red-900 rounded-lg border-2 border-orange-400 p-6">
+      <div class="image-box mb-4">
+        <img src="./images/living-for-the-city.jpg" class="w-full h-full object-cover">
+      </div>
+
+      <h4 class="bebas text-2xl text-yellow-400">Living for the City</h4>
+      <p class="oswald text-orange-300 text-sm mb-3">Song · 1973</p>
+
+      <button onclick="toggleArtifact(1)" class="text-yellow-300 oswald uppercase">Explore More →</button>
+
+      <div id="content-1" class="expandable-content mt-4">
+        <p class="text-orange-100 mb-3">
+          Living for the City is a narrative of racial and social inequality condensed into a 3 minute 39 second masterpiece about a "smart little boy who is born into a loving black family in Mississippi, where he grows up experiencing poverty and discrimination as he sees his very dedicated parents work hard for many long hours at very low pay as they struggle mightily to properly care for their children"(Wikipedia). One of Wonder's, if not the most racially and socially norms challenging song, Living for the City was an instant success reaching number 8 on the Billboard charts and number 1 on the R&B chart.
+        </p>
+        <audio controls preload="none" class="w-full">
+          <source src="./audio/living-for-the-city.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+
+    <!-- Artifact 2 -->
+    <div class="artifact-card bg-red-900 rounded-lg border-2 border-orange-400 p-6">
+      <div class="image-box mb-4">
+        <img src="./images/sir-duke.jpg" class="w-full h-full object-cover">
+      </div>
+
+      <h4 class="bebas text-2xl text-yellow-400">Sir Duke</h4>
+      <p class="oswald text-orange-300 text-sm mb-3">Song · 1976</p>
+
+      <button onclick="toggleArtifact(2)" class="text-yellow-300 oswald uppercase">Explore More →</button>
+
+      <div id="content-2" class="expandable-content mt-4">
+        <p class="text-orange-100 mb-3">
+          A celebration of most of the PIONEERS of Black music, Sir Duke entails a memoir to the late great Duke Ellington. It also mentions Ella Fitzgerald (Scat Queen), Louis Armstrong, and Glenn Miller. Although primarily about the Duke this song has undertones of two artists Wonder was going to work with but sadly they died before he got the chance. Their names were Dinah Washington and Wes Montgomery; he famously said "I knew the title from the beginning but wanted it to be about the musicians who did something for me. So soon they are forgotten. I wanted to show my appreciation."
+        </p>
+        <audio controls preload="none" class="w-full">
+          <source src="./audio/sir-duke.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+
+    <!-- Artifact 3 -->
+    <div class="artifact-card bg-red-900 rounded-lg border-2 border-orange-400 p-6">
+      <div class="image-box mb-4">
+        <img src="./images/happy-birthday.png" class="w-full h-full object-cover">
+      </div>
+
+      <h4 class="bebas text-2xl text-yellow-400">Happy Birthday Campaign</h4>
+      <p class="oswald text-orange-300 text-sm mb-3">Activism · 1980</p>
+
+      <button onclick="toggleArtifact(3)" class="text-yellow-300 oswald uppercase">Explore More →</button>
+
+      <div id="content-3" class="expandable-content mt-4">
+        <p class="text-orange-100 mb-3">
+          This is the song that introduced me to the world of Stevie Wonder in 2nd grade, Happy Birthday Campaign. This is a celebration of Dr. King and the protection of his legacy. This song is a statement like many of his others; detailing that their is no reason why Dr. King shouldn't have a National holiday is his name and celebration.
+        </p>
+        <audio controls preload="none" class="w-full">
+          <source src="./audio/happy-birthday.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+
+  </div>
+  <!-- Artifact 4 -->
+<div class="artifact-card bg-red-900 rounded-lg border-2 border-orange-400 p-6">
+  <div class="image-box mb-4">
+    <img src="./images/superstition.jpg" class="w-full h-80 object-cover">
+  </div>
+
+  <h4 class="bebas text-2xl text-yellow-400">Superstition</h4>
+  <p class="oswald text-orange-300 text-sm mb-3">Song · 1972</p>
+
+  <button onclick="toggleArtifact(4)" class="text-yellow-300 oswald uppercase">
+    Explore More →
+  </button>
+
+  <div id="content-4" class="expandable-content mt-4">
+    <p class="text-orange-100 mb-3">
+      The number one song on the Billboard in Janauary 1973 and the number 12 on the Rolling Stone list of top 500 songs of all time (2021). Superstition was Wonder's first number one single in over 10 years. It dives into the nuiance of living in the moment and not worrying about too much. Wonder played most of the instruments in this song except the elctric guitar which was performed by Jeff Beck.
+    </p>
+    <audio controls preload="none" class="w-full">
+      <source src="./audio/superstition.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+
+<!-- Artifact 5 — VIDEO INTERVIEW -->
+<div class="artifact-card bg-red-900 rounded-lg border-2 border-orange-400 p-6">
+  <div class="image-box mb-4">
+    <img src="./images/stevie-interview.jpg" class="w-full h-full object-cover">
+  </div>
+
+  <h4 class="bebas text-2xl text-yellow-400">Interview on Music& Blindness</h4>
+  <p class="oswald text-orange-300 text-sm mb-3">Video</p>
+
+  <button onclick="toggleArtifact(5)" class="text-yellow-300 oswald uppercase">
+    Explore More →
+  </button>
+
+  <div id="content-5" class="expandable-content mt-4">
+    <p class="text-orange-100 mb-3">
+      In this brief interview, Wonder goes into of what the interpretaion of a blind artist means to him. He doesn't want people to neccesarily see him as only blind and instead a regular, uber-talented musician. We observe his natural talent although disadvantages in this video. 
+    </p>
+
+    <video controls class="w-full rounded-lg border border-orange-400">
+      <source src="./video/stevie-interview.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<!-- Artifact 6 -->
+<div class="artifact-card bg-red-900 rounded-lg border-2 border-orange-400 p-6">
+  <div class="image-box mb-4">
+    <img src="./images/innervisions.jpg" class="w-full h-80 object-cover">
+  </div>
+
+  <h4 class="bebas text-2xl text-yellow-400">Innervisions</h4>
+  <p class="oswald text-orange-300 text-sm mb-3">Album · 1973</p>
+
+  <button onclick="toggleArtifact(6)" class="text-yellow-300 oswald uppercase">
+    Explore More →
+  </button>
+
+  <div id="content-6" class="expandable-content mt-4">
+    <p class="text-orange-100 mb-3">
+      In Innervisions wonder experimented with new instruments including the T.O.N.T.O (The Original New Timbral Orchestra). This album that includes hits such as Living for the City,(which in it of itself is its own Artifact) Higher Ground, Don't You Worry 'Bout a Thing, and He's Misstra Know It All. All of these songs showcase themes of racism, drug abuse, and political and metaphysical opinions. It's many peoples interpretation of his transition to an Adult artist.
+    </p>
+    <audio controls preload="none" class="w-full">
+      <source src="./audio/innervisions.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+</section>
+
+<!-- ================= ESSAY ================= -->
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <button onclick="toggleEssay()"
+          class="w-full bg-orange-600 hover:bg-orange-500 p-6 rounded-lg bebas text-2xl border-2 border-yellow-400">
+    Read Full Curatorial Essay
+  </button>
+
+  <div id="essay-content" class="expandable-content mt-8">
+    <div class="bg-black bg-opacity-50 p-10 rounded-lg border-2 border-orange-400">
+
+      <h3 class="bebas text-4xl text-yellow-300 mb-6 text-center">
+        Visions Through Sound
+      </h3>
+
+      <p class="text-orange-100 mb-4">
+        Although Zora Neale Hurston and Stevie Wonder work in different artistic mediums, they share a common goal. To give voice to marginalized communities and/or groups whose humanity has been glossed over, erased, or distorted by dominant narratives. In Their Eyes Were Watching God, the former addresses Black Southern life through what one can only describe as oral dialect/dictation. She uses this tool to explore the life of a young Black woman, Janie Crawford. The latter, the magnificent Mr.  Wonder, through music and activism, stands up not just for the Black community but also for the disabled individuals of our world who were and are too often ridiculed. He bends sounds into racial and social visibility. Transforming sound into a means of social visibility. Hurston and Wonder both demonstrate that voice can be many things, not just speech and sound, but also power, resistance, and even cultural preservation.
+        Diving deeper into Hurston’s interpretation of Black Southern life, we observe her methodology. Rather than going with the times and writing her book for the white eye and for white people to read (through standardized English), Hurston uses everyday, actual spoken dialect. She does this to introduce themes of humor and emotional depth in Black oral storytelling traditions and overall just shines a light on the stories themselves. This choice is revolutionary for the time, as most Black authors in that period had a more simplistic approach to appease the reader and did not often share true stories. A true PIONEER, Hurston’s dialect (and diction even) affirms Black language as expressive, meaningful, and worthy of literary attention.
+        Connecting back to the novel, Janie’s journey toward being her own self shares many similarities with Hurston and even Wonders' journey of self-expression. As we are introduced to Janie’s voice, we see it often constrained and almost chosen by others. For example, both of her first two husbands are very demanding, though the latter may have had an extremely detrimental effect on her growth. Joe Starks puts a rag in her hair, refuses to let her speak, and overall restricts her to a ‘woman’s role’ as the wife of the mayor. His insistence on her silence reveals the overarching reality of the social silencing of Black women. But over time, we see Janie start to reclaim her voice (like Hurston), emotionally and physically. Her healthier relationship with Tea Cake allows her to gamble with the men at the table rather than be a housewife in the background.
+        Coming back to Hurston, another way she resists stereotypes is by focusing on the minor and interior lives of all her characters. We see this with all the new people she introduces in the book, and how we learn all the minute details about them. And her protagonist, as touched on before, is not reduced to a single narrative. By presenting Black Southern life as complex and emotionally rich on not just a white-washed America but a white-washed globe, Hurston opposes the ‘flat world’ portrayals of mainstream literature. 
+        Like Hurston, Stevie Wonder gives voice to the Black community and to the unable through activism and his music. As a blind Black artist, Wonder faced bias and negative assumptions that disability was a weakness and that his music shouldn’t be so ‘controversial’. Well, he didn’t really listen to those voices, as you know, and instead of accommodating those assumptions, he transformed them into strengths. 
+        Living for the City is a narrative of racial and social inequality condensed into a 3 minute 39 second masterpiece about a "smart little boy who is born into a loving black family in Mississippi, where he grows up experiencing poverty and discrimination as he sees his very dedicated parents work hard for many long hours at very low pay as they struggle mightily to properly care for their children"(Wikipedia). One of Wonder's, if not the most racially and socially norm-challenging song, Living for the City was an instant success, reaching number 8 on the Billboard charts and number 1 on the R&B chart. This mirrors Hurston’s challenge of racial stereotypes.
+        Similarly, in Innervisions, Wonder experimented with new instruments, including the T.O.N.T.O (The Original New Timbral Orchestra). This album that includes hits such as Living for the City (which in and of itself is its own Artifact), Higher Ground, Don't You Worry 'Bout a Thing, and He's Misstra Know It All. All these songs showcase themes of racism, drug abuse, and political and metaphysical opinions. It's a lot of people's interpretation of his transition to an Adult artist.
+        And finally, the song that introduced me to the world of Stevie Wonder in 2nd grade, Happy Birthday Campaign. This is a celebration of Dr. King and the protection of his legacy. This song is a statement, like many of his others, that there is no reason Dr. King shouldn't have a national holiday in his name and celebration.
+        As we explored before, Hurston and Wonder use different artistic tools, but they pursue similar goals. Hurston primarily through diction and narrative structure, while Wonder uses sound, rhythm, and performance. Yet both artists preserve culture and ability by challenging norms and embedding those challenges directly into their work rather than modernizing for an audience. Hurston does not translate dialect for white readers, and Wonder does not dilute his music to avoid discomfort. In both cases, the audience is asked to listen rather than to dominate.
+        The voices preserved by Hurston and Wonder are fundamentally important because they challenge, even today, systems that rely on silence. When marginalized communities are ignored, stereotypes are there to take their place. But these artists took the stage to undermine those exact stereotypes. Hurston understood that without authentic representation, Black Southern life would be reduced to rubble and be overall boring. Wonder recognized that without his music, many underprivileged people could never hear about political injustice and, therefore, Black experiences would be normalized or forgotten.
+        
+        
+</p>
+
+
+      <p class="text-orange-100">
+        Together, they show that voice, memory, and culture are acts of resistance.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<footer class="text-center py-10 border-t border-yellow-500">
+  <p class="bebas text-yellow-400">Museum of Silenced Voices</p>
+</footer>
+
+<script>
+  function toggleArtifact(num) {
+    document.getElementById('content-' + num).classList.toggle('expanded');
+  }
+
+  function toggleEssay() {
+    document.getElementById('essay-content').classList.toggle('expanded');
+  }
+</script>
+
+</body>
+</html>
